@@ -329,19 +329,19 @@ six = "*"
 
 [[package]]
 name = "django-cacheback"
-version = "1.4.0"
+version = "3.0.0"
 description = "Caching library for Django that uses Celery or RQ to refresh cache items asynchronously"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6,<4"
 
 [package.dependencies]
-django = ">=1.8"
+django = ">=2"
 
 [package.extras]
-celery = ["celery"]
-rq = ["django-rq (>=0.9)"]
-tests = ["tox", "tox-pyenv", "mock", "freezegun (>=0.3.7)", "pytest (>=3.0.3)", "pytest-cov (>=2.4.0)", "pytest-flakes (>=1.0.1)", "pytest-pep8 (>=1.0.6)", "pytest-django (>=3.0.0)", "pytest-isort (>=0.1.0)", "celery", "django-rq (>=0.9)"]
+celery = ["celery (>=4)"]
+rq = ["django-rq (>=2)"]
+docs = ["Sphinx (>=3.3.0,<4)"]
 
 [[package]]
 name = "django-constance"
@@ -1541,7 +1541,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d311f2024da08c65ca7114cbfaada7f2f30cfe31eef5fd8e259b75e59b7633ad"
+content-hash = "c9e5e0f9a1f6671d8001838ebde11bd3853da683976391ad9d0bd8c1141d3fdf"
 
 [metadata.files]
 amqp = [
@@ -1706,8 +1706,8 @@ django-appconf = [
     {file = "django_appconf-1.0.3-py2.py3-none-any.whl", hash = "sha256:c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"},
 ]
 django-cacheback = [
-    {file = "django-cacheback-1.4.0.tar.gz", hash = "sha256:6483eb8744d001b8505c38a5217be36998f9c11858b2126974a9060dfc74ae50"},
-    {file = "django_cacheback-1.4.0-py2.py3-none-any.whl", hash = "sha256:972c7697f1929bf9676893a8e6cb1f7873a2c14e835a8d24fbb59bbf37731c18"},
+    {file = "django-cacheback-3.0.0.tar.gz", hash = "sha256:fdc5bf18457333d11bbad0b5f809e5e3969bdf6b24ff36d0c291600c47ac608f"},
+    {file = "django_cacheback-3.0.0-py3-none-any.whl", hash = "sha256:8fcce22adfd4d3eb78d6bce68f894f712dc9bf15da9a67f3618d250917e8b712"},
 ]
 django-constance = [
     {file = "django-constance-2.6.0.tar.gz", hash = "sha256:12d827f9d5552ee39884fb6fb356f231f32b1ab8958acc715e3d1a6ecf913653"},
