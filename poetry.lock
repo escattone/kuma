@@ -1205,14 +1205,14 @@ pytest = ">=2.9.0"
 
 [[package]]
 name = "pytest-rerunfailures"
-version = "8.0"
+version = "9.1.1"
 description = "pytest plugin to re-run tests to eliminate flaky failures"
 category = "dev"
 optional = false
-python-versions = "*"
+python-versions = ">=3.5"
 
 [package.dependencies]
-pytest = ">=4.4"
+pytest = ">=5.0"
 
 [[package]]
 name = "python-dateutil"
@@ -1541,7 +1541,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d311f2024da08c65ca7114cbfaada7f2f30cfe31eef5fd8e259b75e59b7633ad"
+content-hash = "ad74f4986131a717a409901cd7c0a468dbc89d631c0e71cfeddb7abc5addf221"
 
 [metadata.files]
 amqp = [
@@ -2136,8 +2136,8 @@ pytest-metadata = [
     {file = "pytest_metadata-1.8.0-py2.py3-none-any.whl", hash = "sha256:c29a1fb470424926c63154c1b632c02585f2ba4282932058a71d35295ff8c96d"},
 ]
 pytest-rerunfailures = [
-    {file = "pytest-rerunfailures-8.0.tar.gz", hash = "sha256:17c1236b9f8463f74a5df6c807f301c53c2ea1ab81b7509b7e23fab3b7cbe812"},
-    {file = "pytest_rerunfailures-8.0-py2.py3-none-any.whl", hash = "sha256:4997cda1b82f74cc0c280f6a5a0470d36deb318e3d8bd6da71efc32a3e0c9ae4"},
+    {file = "pytest-rerunfailures-9.1.1.tar.gz", hash = "sha256:1cb11a17fc121b3918414eb5eaf314ee325f2e693ac7cb3f6abf7560790827f2"},
+    {file = "pytest_rerunfailures-9.1.1-py3-none-any.whl", hash = "sha256:2eb7d0ad651761fbe80e064b0fd415cf6730cdbc53c16a145fd84b66143e609f"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
