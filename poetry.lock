@@ -615,7 +615,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "elasticmock"
-version = "1.7.0"
+version = "1.8.0"
 description = "Python Elasticsearch Mock for test purposes"
 category = "dev"
 optional = false
@@ -1541,7 +1541,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d311f2024da08c65ca7114cbfaada7f2f30cfe31eef5fd8e259b75e59b7633ad"
+content-hash = "b3a98f6ebc09364b2370f4381821b17772abe0bcb4d88b92ade747be972cfade"
 
 [metadata.files]
 amqp = [
@@ -1800,7 +1800,7 @@ docutils = [
     {file = "docutils-0.15.2.tar.gz", hash = "sha256:a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"},
 ]
 elasticmock = [
-    {file = "ElasticMock-1.7.0.tar.gz", hash = "sha256:059a87daf934b74293ecf2cae7ada5e9fa84c6d9fa27ab01c8fec61c031b5bfa"},
+    {file = "ElasticMock-1.8.0.tar.gz", hash = "sha256:e3c9471f8eed92872be270e886037298af52ff6f7b60fc1c778e8e81b7393ae1"},
 ]
 elasticsearch = [
     {file = "elasticsearch-7.10.0-py2.py3-none-any.whl", hash = "sha256:9a21bfa7dc6a0b0dc142088bd653d8ce5ab284b4f7a3ded716185adf5276a7fe"},
