@@ -401,14 +401,14 @@ dev = ["flake8", "isort"]
 
 [[package]]
 name = "django-extensions"
-version = "2.2.8"
+version = "3.1.3"
 description = "Extensions for Django"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
 
 [package.dependencies]
-six = ">=1.2"
+Django = ">=2.2"
 
 [[package]]
 name = "django-honeypot"
@@ -1541,7 +1541,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d311f2024da08c65ca7114cbfaada7f2f30cfe31eef5fd8e259b75e59b7633ad"
+content-hash = "c3be9f370165eaf7fa6548724b7cc6453a4cf6315418b40338bef4f4853fea10"
 
 [metadata.files]
 amqp = [
@@ -1725,8 +1725,8 @@ django-decorator-include = [
     {file = "django_decorator_include-2.1-py3-none-any.whl", hash = "sha256:fd2d6735a6225c3836908b3cca6366e0f5b556a44a47ac92cc1f08c86fa5a3dc"},
 ]
 django-extensions = [
-    {file = "django-extensions-2.2.8.tar.gz", hash = "sha256:2699cc1d6fb4bd393c0b5832fea4bc685f2ace5800b3c9ff222b2080f161ac04"},
-    {file = "django_extensions-2.2.8-py2.py3-none-any.whl", hash = "sha256:1a03c4e8bade575f8c2be6c76456f8a2be3f9b02ab9f47d3535afa9562dc0493"},
+    {file = "django-extensions-3.1.3.tar.gz", hash = "sha256:5f0fea7bf131ca303090352577a9e7f8bfbf5489bd9d9c8aea9401db28db34a0"},
+    {file = "django_extensions-3.1.3-py3-none-any.whl", hash = "sha256:50de8977794a66a91575dd40f87d5053608f679561731845edbd325ceeb387e3"},
 ]
 django-honeypot = [
     {file = "django-honeypot-0.8.0.tar.gz", hash = "sha256:28474d20ee1037e70b1e760b5aa7390a7e1ebfc9978688127a2dda8c174ed50c"},
