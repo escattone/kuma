@@ -628,7 +628,7 @@ python-dateutil = "*"
 
 [[package]]
 name = "elasticsearch"
-version = "7.10.0"
+version = "7.12.1"
 description = "Python client for Elasticsearch"
 category = "main"
 optional = false
@@ -1541,7 +1541,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d311f2024da08c65ca7114cbfaada7f2f30cfe31eef5fd8e259b75e59b7633ad"
+content-hash = "9817d826f64e587c5461490eca88d0e92ddc73cb6512c69cb2e18f0492825751"
 
 [metadata.files]
 amqp = [
@@ -1803,8 +1803,8 @@ elasticmock = [
     {file = "ElasticMock-1.7.0.tar.gz", hash = "sha256:059a87daf934b74293ecf2cae7ada5e9fa84c6d9fa27ab01c8fec61c031b5bfa"},
 ]
 elasticsearch = [
-    {file = "elasticsearch-7.10.0-py2.py3-none-any.whl", hash = "sha256:9a21bfa7dc6a0b0dc142088bd653d8ce5ab284b4f7a3ded716185adf5276a7fe"},
-    {file = "elasticsearch-7.10.0.tar.gz", hash = "sha256:9053ca99bc9db84f5d80e124a79a32dfa0f7079b2112b546a03241c0dbeda36d"},
+    {file = "elasticsearch-7.12.1-py2.py3-none-any.whl", hash = "sha256:1840fea8c305224b8c28acabc8697f739cdfb03618f2d2427b42838971a787f6"},
+    {file = "elasticsearch-7.12.1.tar.gz", hash = "sha256:df35d8c638f946f098a74681b18611bdf27ba469fa2063e3dfc8bdc290b11419"},
 ]
 elasticsearch-dsl = [
     {file = "elasticsearch-dsl-7.3.0.tar.gz", hash = "sha256:0ed75f6ff037e36b2397a8e92cae0ddde79b83adc70a154b8946064cb62f7301"},
