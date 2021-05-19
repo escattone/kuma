@@ -574,14 +574,11 @@ django = "*"
 
 [[package]]
 name = "django-waffle"
-version = "0.20.0"
+version = "2.1.0"
 description = "A feature flipper for Django."
 category = "main"
 optional = false
 python-versions = "*"
-
-[package.dependencies]
-six = ">=1.13.0"
 
 [[package]]
 name = "djangorestframework"
@@ -1522,7 +1519,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d45f865abd03b2de2d9f8e5725f2a66aa0bdde04afa1bf2403a7fe8324958727"
+content-hash = "b2c4a04b1ea2039d3377e8b75d93985bd92db964f538da501e8501f995802ab0"
 
 [metadata.files]
 amqp = [
@@ -1764,8 +1761,8 @@ django-tidings = [
     {file = "django_tidings-2.0.1-py2.py3-none-any.whl", hash = "sha256:a144628acdd9ddafdc921cdb70fb8ee297886b1dc38b00fab8fffbbf46163012"},
 ]
 django-waffle = [
-    {file = "django-waffle-0.20.0.tar.gz", hash = "sha256:744c3fe6cedbd175d2247cb93904e931f056b503f6e4a4836a0b9b66b43be625"},
-    {file = "django_waffle-0.20.0-py2.py3-none-any.whl", hash = "sha256:73ec03d28c60af0a6fd6327933e615e92dd936137d25b25d3ebaf64e9963c463"},
+    {file = "django-waffle-2.1.0.tar.gz", hash = "sha256:a96b52ed6256238b7e0dda8c5c18b6f00e38008fae380f9ff22e12fd1a702c7f"},
+    {file = "django_waffle-2.1.0-py2.py3-none-any.whl", hash = "sha256:a39f294f8c4e026b9e441d0e4d35ff3b26d1eb2da1d52196ba4bc04ba78b1db1"},
 ]
 djangorestframework = [
     {file = "djangorestframework-3.11.0-py3-none-any.whl", hash = "sha256:05809fc66e1c997fd9a32ea5730d9f4ba28b109b9da71fccfa5ff241201fd0a4"},
