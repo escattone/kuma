@@ -345,11 +345,11 @@ tests = ["tox", "tox-pyenv", "mock", "freezegun (>=0.3.7)", "pytest (>=3.0.3)", 
 
 [[package]]
 name = "django-constance"
-version = "2.6.0"
+version = "2.8.0"
 description = "Django live settings with pluggable backends, including Redis."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
 
 [package.dependencies]
 django-picklefield = {version = "*", optional = true, markers = "extra == \"database\""}
@@ -1522,7 +1522,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d45f865abd03b2de2d9f8e5725f2a66aa0bdde04afa1bf2403a7fe8324958727"
+content-hash = "d4a188f20237b822ad0fbd49ea02aea0c9dedd7162b9293fc25c4b51e8a7c403"
 
 [metadata.files]
 amqp = [
@@ -1691,7 +1691,8 @@ django-cacheback = [
     {file = "django_cacheback-1.4.0-py2.py3-none-any.whl", hash = "sha256:972c7697f1929bf9676893a8e6cb1f7873a2c14e835a8d24fbb59bbf37731c18"},
 ]
 django-constance = [
-    {file = "django-constance-2.6.0.tar.gz", hash = "sha256:12d827f9d5552ee39884fb6fb356f231f32b1ab8958acc715e3d1a6ecf913653"},
+    {file = "django-constance-2.8.0.tar.gz", hash = "sha256:0a492454acc78799ce7b9f7a28a00c53427d513f34f8bf6fdc90a46d8864b2af"},
+    {file = "django_constance-2.8.0-py3-none-any.whl", hash = "sha256:60fec73e397d5f4f7440f611b18d3e7ce5342647f316fedc47b62e1411c849e7"},
 ]
 django-csp = [
     {file = "django_csp-3.6-py2.py3-none-any.whl", hash = "sha256:d9ee5a8c6442aa54854e8de627c2826786208ed38fb4ea8ced08c42332673eb1"},
