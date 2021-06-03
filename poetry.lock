@@ -412,11 +412,14 @@ six = ">=1.2"
 
 [[package]]
 name = "django-honeypot"
-version = "0.9.0"
+version = "1.0.1"
 description = "Django honeypot field utilities"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7,<4.0"
+
+[package.dependencies]
+Django = ">=2.2,<4.0"
 
 [[package]]
 name = "django-jinja"
@@ -1522,7 +1525,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d45f865abd03b2de2d9f8e5725f2a66aa0bdde04afa1bf2403a7fe8324958727"
+content-hash = "3c6b109122769ef42bdec5a7c124f97c99bae54b5209a63c4858d75fdaddda2d"
 
 [metadata.files]
 amqp = [
@@ -1710,7 +1713,8 @@ django-extensions = [
     {file = "django_extensions-2.2.8-py2.py3-none-any.whl", hash = "sha256:1a03c4e8bade575f8c2be6c76456f8a2be3f9b02ab9f47d3535afa9562dc0493"},
 ]
 django-honeypot = [
-    {file = "django-honeypot-0.9.0.tar.gz", hash = "sha256:419fea300bb00d71ea80224c654cd242e529d9404ff472ad32828ede9ea4ac73"},
+    {file = "django-honeypot-1.0.1.tar.gz", hash = "sha256:a595791d17999852d7ca9acb839ddd927297749fd73cd6c186fa619b062379eb"},
+    {file = "django_honeypot-1.0.1-py3-none-any.whl", hash = "sha256:2e10b61116de9aac821e3fcd97824672e0698ebfc8b47fd3f21721e30b15c34e"},
 ]
 django-jinja = [
     {file = "django-jinja-2.7.0.tar.gz", hash = "sha256:d56ecddaa6d3caf508509aae5a979ebd8a3427477c34fcbcac14bf8389a21a12"},
