@@ -31,123 +31,17 @@ Pre-Deployment
 
 Before deploying, a staff member should:
 
-* (Once a week) Check that the latest `mdn-browser-compat-data`_ node package
-  is included in the KumaScript image. The latest package is installed when the
-  image is created, during the ``RUN npm update`` step, and can be verified by
-  reading the build logs or running the image.
-
-* (Once a week) Update the ``locale`` and ``kumascript`` submodules. The ``locale``
-  submodule must be updated to apply new translations to production. The
-  ``kumascript`` submodule is not used for deployment, but updating it keeps
-  the development environment in sync.
-
-    - Commit or stash any changes in your working copy.
-    - Create a pre-push branch from master::
-
-        git fetch origin
-        git checkout -b pre-push-`date +"%Y-%m-%d"` origin/master
-
-    - Update the submodules::
-
-        git submodule update --remote
-        git commit -m "Updating submodules" kumascript locale
-
-    - Push new localizable strings. This step is only necessary when there
-      are new strings. The TravisCI job ``TOXENV=locales`` checks for new
-      strings, and you can examine the output of the recent
-      `master build`_ to see if there are differences. At the same time, it's
-      not too hard to run locally and then revert if there are no useful
-      changes.
-
-      #. On the host system, checkout the master ``locale`` branch::
-
-          cd locale
-          git checkout master
-          git pull
-
-      #. Update ``kuma/settings/common.py``, and bump the version in
-         ``PUENTE['VERSION']``.
-
-      #. Inside the development environment, extract and rebuild the
-         translations::
-
-          make localerefresh
-
-      #. On the host system (still in the ``locale`` subfolder), review the
-         changes to source English strings::
-
-          git diff templates/LC_MESSAGES
-
-      #. If there are useful changes (ignore comment lines and look for
-         ``msgid`` as the changed line), commit the files in the locale
-         submodule::
-
-          git add --all .
-          git commit
-
-         For the commit message, use the ``PUENTE['VERSION']`` in the commit
-         subject, and summarize the string changes in the commit body, like::
-
-          Update strings 2018.08
-
-          * Add "View All" text for document history pagination
-
-         Attempt to push to the mdn-l10n_ repository::
-
-          git push
-
-         If this fails, **do not force with --force**, or attempt to pull and
-         create a merge commit.  Someone has added a translation while you were
-         working, and you need to start over to preserve their work::
-
-          git fetch
-          git reset --hard @{u}
-
-         This resets your locale submodule to the new master. Start over on
-         step 3 (``make localerefresh``).
-
-         If the push to mdn-l10n_ is a success, commit your Kuma changes::
-
-          cd ..
-          git commit kuma/settings/common.py locale
-
-         You can use the same commit message used for the ``locale`` commit.
-
-      #. If there are no new strings, throw the changes away, starting in the
-         ``locale`` folder::
-
-          git checkout -- .
-          cd ..
-          git checkout -- kuma/settings/common.py
-
-    - Push the branch and `open a pull request`_::
-
-        git push -u origin pre-push-`date +"%Y-%m-%d"`
-
-    - Check that tests pass. The ``TOXENV=locales`` job, which uses Dennis_ to
-      check strings, is the job that occasionally fails. This is due to a
-      string change committed in Pontoon_ that will break rendering in
-      production.  If this happens, fix the incorrect translation, push to
-      master on mdn-l10n_, and update the submodule in the pull request. Wait
-      for the tests to pass.
-
-    - Merge the pull request. A "Rebase and merge" is preferred, to avoid a
-      merge commit with little long-term value. Delete the pre-push branch.
-
 * Check the latest images from master are built by Jenkins_
-  (`Kuma master build`_, `KumaScript master build`_, both private to staff),
+  (`Kuma master build`_, both private to staff),
   and uploaded to the DockerHub_ repositories
-  (`Kuma images`_, `KumaScript images`_).
+  (`Kuma images`_).
 
 .. _Dennis: https://github.com/willkg/dennis
 .. _Jenkins: https://ci.us-west-2.mdn.mozit.cloud
 .. _Kuma: https://github.com/mdn/kuma/actions
-.. _KumaScript: https://travis-ci.org/mdn/kumascript
 .. _Pontoon: https://pontoon.mozilla.org/projects/mdn/
 .. _`Kuma images`: https://hub.docker.com/r/mdnwebdocs/kuma/tags/
 .. _`Kuma master build`: https://ci.us-west-2.mdn.mozit.cloud/blue/organizations/jenkins/kuma/activity/?branch=master
-.. _`KumaScript images`: https://hub.docker.com/r/mdnwebdocs/kumascript/tags/
-.. _`KumaScript master build`: https://ci.us-west-2.mdn.mozit.cloud/blue/organizations/jenkins/kumascript/activity?branch=master
 .. _`master build`: https://travis-ci.com/mdn/kuma
 .. _`mdn-browser-compat-data`: https://www.npmjs.com/package/mdn-browser-compat-data
 .. _`open a pull request`: https://github.com/mdn/kuma
@@ -168,17 +62,10 @@ pushing to production.
     git checkout stage-push
     git merge --ff-only origin/master
     git push
-    cd kumascript
-    git fetch origin
-    git checkout stage-push
-    git merge --ff-only origin/master
-    git push
-    cd ..
 
 * Prepare for testing on staging:
 
-  * Look at the changes to be pushed (`What's Deployed on Kuma`_, and
-    `What's deployed on KumaScript`_). To enlist the help of pull request
+  * Look at the changes to be pushed (`What's Deployed on Kuma`_). To enlist the help of pull request
     authors and others, you can report bug numbers and PRs in Matrix.
   * Think about manual tests to confirm the code changes work without errors.
 
@@ -198,7 +85,6 @@ pushing to production.
 * Announce in Slack (#mdn-dev) that staging looks good, and you are pushing to production.
 
 .. _Jenkins: https://ci.us-west-2.mdn.mozit.cloud
-.. _`What's Deployed on KumaScript`: https://whatsdeployed.io/s-SWJ
 .. _`What's Deployed on Kuma`: https://whatsdeployed.io/s-HC0
 .. _`functional tests`: https://ci.us-west-2.mdn.mozit.cloud/blue/organizations/jenkins/kuma/branches
 
@@ -215,12 +101,6 @@ monitored by the development team and MozMEAO.
     git checkout prod-push
     git merge --ff-only origin/master
     git push
-    cd kumascript
-    git fetch origin
-    git checkout prod-push
-    git merge --ff-only origin/master
-    git push
-    cd ..
 
 * For the next 30-60 minutes,
 
@@ -248,9 +128,3 @@ the AWS US West datacenter.
     git checkout standby-push
     git merge --ff-only origin/master
     git push
-    cd kumascript
-    git fetch origin
-    git checkout standby-push
-    git merge --ff-only origin/master
-    git push
-    cd ..

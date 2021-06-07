@@ -126,59 +126,6 @@ Then run the following command::
 
 This will ensure the sample database is in sync with your version of Kuma.
 
-Compile locales
-===============
-Localized string databases are included in their source form, and need to be
-compiled to their binary form::
-
-    docker-compose exec web make localecompile
-
-Dozens of lines of warnings will be printed::
-
-    cd locale; ./compile-mo.sh .
-    ./af/LC_MESSAGES/django.po:2: warning: header field 'PO-Revision-Date' still has the initial default value
-    ./af/LC_MESSAGES/django.po:2: warning: header field 'Last-Translator' still has the initial default value
-    ...
-    ./zu/LC_MESSAGES/javascript.po:2: warning: header field 'PO-Revision-Date' still has the initial default value
-    ./zu/LC_MESSAGES/javascript.po:2: warning: header field 'Last-Translator' still has the initial default value
-
-Warnings are OK, and will be fixed as translators update the strings on
-Pontoon_. If there is an error, the output will end with the error, such as::
-
-    ./az/LC_MESSAGES/django.po:263: 'msgid' and 'msgstr' entries do not both end with '\n'
-    msgfmt: found 1 fatal error
-
-These need to be fixed by a Kuma developer. Notify them in the #mdn Matrix
-room or open a bug. You can continue with installation, but non-English
-locales will not be localized.
-
-.. _Pontoon: https://pontoon.mozilla.org/projects/mdn/
-
-Generate static assets
-======================
-Static assets such as CSS and JS are included in source form, and need to be
-compiled to their final form::
-
-    docker-compose exec web make build-static
-
-A few thousand lines will be printed, like::
-
-    ## Generating JavaScript translation catalogs ##
-    processing language en_US
-    processing language af
-    processing language ar
-    ...
-    ## Compiling (Sass), collecting, and building static files ##
-    Copying '/app/kuma/static/img/embed/promos/survey.svg'
-    Copying '/app/kuma/static/styles/components/home/column-callout.scss'
-    Copying '/app/build/locale/jsi18n/fy-NL/javascript.js'
-    ...
-    Post-processed 'build/styles/editor-locale-ar.css' as 'build/styles/editor-locale-ar.css'
-    Post-processed 'build/styles/locale-ln.css' as 'build/styles/locale-ln.css'
-    Post-processed 'build/styles/editor-locale-pt-BR.css' as 'build/styles/editor-locale-pt-BR.css'
-    ....
-    1870 static files copied to '/app/static', 125 post-processed.
-
 Visit the homepage
 ==================
 Open the homepage at http://localhost.org:8000 . You've installed Kuma!

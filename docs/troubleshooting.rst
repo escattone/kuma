@@ -76,30 +76,10 @@ them to your user on the host system::
 
 .. _more-help:
 
-KumaScript macros are not evaluating
-------------------------------------
-
-If you're seeing tags like ``{{HTMLSidebar}}`` or ``{{HTMLElement("head")}}``
-it could be happening because there is an outdated macro that needs to be
-removed.
-
-For example on ``/en-US/docs/Web/HTML``, there is a deleted macro called
-``CommunityBox``. To fix this, log in to edit the page, remove the
-``CommunityBox`` macro, then click "Publish".  Visit the affected page again
-and you should see actual content instead of the macros.
-
-Note: Sometimes the wiki site
-(e.g. http://wiki.localhost.org:8000/en-US/docs/Web/HTML$edit) will throw
-an error after editing the page, acting as if it didn't save your edit. View
-the actual URL of the page (e.g. http://localhost.org:8000/en-US/docs/Web/HTML)
-to verify that the changes were accepted.
-
-
 Getting more help
 -----------------
 Check if there is anything helpful in the logs::
 
-    docker-compose logs web kumascript
     docker-compose logs web
 
 If you have more problems running Kuma, please:
