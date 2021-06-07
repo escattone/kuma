@@ -322,13 +322,6 @@ them against your local Docker instance, first do the following:
        MAINTENANCE_MODE=True
        DATABASE_USER=kuma_ro
 
-   This, in turn, will also require you to recompile your static assets::
-
-       docker-compose up -d
-       docker-compose exec web ./manage.py compilejsi18n
-       docker-compose exec web ./manage.py collectstatic
-       docker-compose restart web
-
 Now you should be ready for a successful test run::
 
     py.test --maintenance-mode -m "not search" tests/functional --base-url http://localhost:8000 --driver Chrome --driver-path /path/to/chromedriver
