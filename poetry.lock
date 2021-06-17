@@ -815,11 +815,11 @@ python-versions = "*"
 
 [[package]]
 name = "newrelic"
-version = "5.14.0.142"
+version = "6.4.1.158"
 description = "New Relic Python Agent"
 category = "main"
 optional = false
-python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
+python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*"
 
 [package.extras]
 infinite-tracing = ["grpcio (<2)", "protobuf (<4)"]
@@ -1380,7 +1380,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "02e0578d9fe91f17400fb37c6160dea4b900d47eeaec78ac64ee8c04ece642d6"
+content-hash = "9274b5fc6c2fab9cd79e7af300c3c9a0d68deef129e75e97dfdcedf7186b95b6"
 
 [metadata.files]
 amqp = [
@@ -1871,7 +1871,14 @@ mysqlclient = [
     {file = "mysqlclient-1.4.6.tar.gz", hash = "sha256:f3fdaa9a38752a3b214a6fe79d7cae3653731a53e577821f9187e67cbecb2e16"},
 ]
 newrelic = [
-    {file = "newrelic-5.14.0.142.tar.gz", hash = "sha256:428b451151660b1b611420256e7ae86fba58b436bc78079a47d8b7dabcdcaa33"},
+    {file = "newrelic-6.4.1.158-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:c991e80f3c62bcc5919acb43eb33bd3c7aaeab562223f28cd2672aa1d4f47745"},
+    {file = "newrelic-6.4.1.158-cp27-cp27m-manylinux2010_x86_64.whl", hash = "sha256:b54103c1aca4a613dbc5f1c8bddc35d3ed532f7298b0904b6eeffd22d19db753"},
+    {file = "newrelic-6.4.1.158-cp27-cp27m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:50b6f2a71f9fc9032fa1b4318a9a8ed30ec1565d5430c32c7f42c890a4fbac59"},
+    {file = "newrelic-6.4.1.158-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:45bb9cb7b6b575c91cefe2e8d6a5d309f46bf04e631a60c256b354059dae326f"},
+    {file = "newrelic-6.4.1.158-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:bb0a19afd67f9655aa74fd2e4a77fd0acc6da7fabfea5444f2aefbbf451d59cd"},
+    {file = "newrelic-6.4.1.158-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:5961186ea31aaf7cb0b3a8355ddb0363d5f25a469899001d0315e256ac9f286e"},
+    {file = "newrelic-6.4.1.158-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:26c4a72f5ed651251eb0fbd5bf8d47cce406daccfdc32192fe94b7d339d39ff1"},
+    {file = "newrelic-6.4.1.158.tar.gz", hash = "sha256:2bf81509689617e0cc6b2033513971665b71d26458d6c39f7d3c2f31a8a7088a"},
 ]
 oauth2client = [
     {file = "oauth2client-4.1.3-py2.py3-none-any.whl", hash = "sha256:b8a81cc5d60e2d364f0b1b98f958dbd472887acaf1a5b05e21c28c31a2d6d3ac"},
