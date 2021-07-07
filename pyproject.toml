@@ -34,7 +34,7 @@ djangorestframework = "^3.11.2"
 elasticsearch = "^7.13.1"
 elasticsearch-dsl = "^7.3.0"
 enmerkar = "^0.7.1" # Maintained fork of django-babel
-google-api-python-client = "^1.7.11"
+google-api-python-client = "^2.10.0"
 gunicorn = "^20.1.0"
 html5lib = "1.0.1"
 httplib2 = "^0.17.0"
@@ -73,13 +73,13 @@ pytest-base-url = "^1.4.1"
 pytest-cov = "~2.8.1"
 pytest-django = "~3.8.0"
 pytest-metadata = "^1.11.0"
-pytest-rerunfailures = "^8.0"
+pytest-rerunfailures = "^10.1"
 requests-mock = "^1.9.2"
 
 ElasticMock = "^1.8.0"
 
 # Linting
-black = "20.8b1"
+black = "21.6b0"
 flake8 = "^3.9.2"
 flake8-import-order = "^0.18.1"
 dennis = "^0.9" # Used by `make localetest` to lint po files
